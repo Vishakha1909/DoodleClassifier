@@ -156,12 +156,12 @@ function setup() {
   trainButton.mousePressed(function() {
     trainEpoch(training);
     epochCounter++;
-    console.log("Epoch: " + epochCounter);
+    window.alert("Epoch: " + epochCounter);
   });
   let testButton = select('#test');
   testButton.mousePressed(function() {
     let percent = testingData(testing);
-    console.log("Percent: " + nf(percent,2,2) + "%");
+    window.alert("Percent: " + nf(percent,2,2) + "%");
   });
   let guessButton = select('#guess');
   guessButton.mousePressed(function() {
