@@ -12,6 +12,10 @@ h1 {
   color: white;
 }
 
+marquee {
+  color: #ddf109;
+}
+
 .button {
   background-color: #f10ca2;
   border: none;
