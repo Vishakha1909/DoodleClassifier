@@ -1,15 +1,19 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color:cadetblue;
+  background-color: #1c144b;
 }
 
 canvas {
   display: block;
 }
 
+h1 {
+  color: white;
+}
+
 .button {
-  background-color: rgb(107, 34, 91);/* Green */
+  background-color: #f10ca2;
   border: none;
   color: white;
   padding: 16px 32px;
@@ -19,10 +23,10 @@ canvas {
   font-size: 16px;
   margin: 4px 2px;
   transition-duration: 0.4s;
-  cursor: pointer;
+  cursor:crosshair;
 }
 
 .button:hover {
-  background-color: #4CAF50; /* Green */
+  background-color:#ddf109;
   color: white;
 }

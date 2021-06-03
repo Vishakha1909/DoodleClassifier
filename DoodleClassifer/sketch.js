@@ -106,7 +106,7 @@ let cnv;
 function centerCanvas() {
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
-  cnv.position(x, y+ 70);
+  cnv.position(x, y+ 20);
 }
 function windowResized() {
   centerCanvas();
@@ -156,12 +156,12 @@ function setup() {
   trainButton.mousePressed(function() {
     trainEpoch(training);
     epochCounter++;
-    console.log("Epoch: " + epochCounter);
+    window.alert("Epoch: " + epochCounter + " trained");
   });
   let testButton = select('#test');
   testButton.mousePressed(function() {
     let percent = testingData(testing);
-    console.log("Percent: " + nf(percent,2,2) + "%");
+    window.alert("Percent: " + nf(percent,2,2) + "%");
   });
   let guessButton = select('#guess');
   guessButton.mousePressed(function() {
@@ -176,27 +176,38 @@ function setup() {
     }
     let guess = nn.predict(inputs);
     let m = max(guess);
+    let final;
     let classification = guess.indexOf(m);
     if(classification === BOOK)
     {
+      final = "BOOK";
       console.log("BOOK");
     }
     else if(classification === RAINBOW)
     {
+      final = "RAINBOW";
       console.log("RAINBOW");
     }
     else if(classification === BICYCLE)
     {
+      final = "BICYCLE";
       console.log("BICYCLE");
     }
     else if(classification === BOWTIE)
     {
+      final = "BOWTIE";
       console.log("BOWTIE");
     }
     else if(classification === SMILEY)
     {
+      final = "SMILEY FACE";
       console.log("SMILEY FACE")
     }
+    else
+    {
+      final = "NOT SURE";
+    }
+    window.alert(final);
   });
 
   let clearButton = select('#clear');
