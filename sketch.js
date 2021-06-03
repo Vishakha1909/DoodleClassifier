@@ -102,9 +102,19 @@ function testingData(testing)
   let percent = 100 * correct / testing.length;
   return percent;
 }
+let cnv;
+function centerCanvas() {
+  var x = (windowWidth - width) / 2;
+  var y = (windowHeight - height) / 2;
+  cnv.position(x, y+ 20);
+}
+function windowResized() {
+  centerCanvas();
+}
 
 function setup() {
-  createCanvas(280, 280);
+  cnv = createCanvas(280, 280);
+  centerCanvas();
   background(255);
 
   //preparing the data
