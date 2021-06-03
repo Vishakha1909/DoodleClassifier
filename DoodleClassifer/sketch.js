@@ -1,5 +1,5 @@
 const len = 784;
-const total_data = 1000;
+const total_data = 5000;
 let book_data;
 let rainbow_data;
 let bicycle_data;
@@ -22,11 +22,11 @@ let smiley = {};
 
 function preload()
 {
-  book_data = loadBytes('QuickDrawData/book1000.bin');
-  rainbow_data = loadBytes('QuickDrawData/rainbow1000.bin');
-  bicycle_data = loadBytes('QuickDrawData/bicycle1000.bin');
-  bowtie_data = loadBytes('QuickDrawData/bowtie1000.bin');
-  smiley_data = loadBytes('QuickDrawData/smiley1000.bin');
+  book_data = loadBytes('QuickDrawData/book5000.bin');
+  rainbow_data = loadBytes('QuickDrawData/rainbow5000.bin');
+  bicycle_data = loadBytes('QuickDrawData/bicycle5000.bin');
+  bowtie_data = loadBytes('QuickDrawData/bowtie5000.bin');
+  smiley_data = loadBytes('QuickDrawData/smiley5000.bin');
 }
 
 function viewData(data) {
@@ -57,7 +57,7 @@ function prepareData(category,data, label) {
   for(let i = 0 ; i < total_data ; i++)
   {
     let offset = i * len;
-    let threshold = floor(0.8 * total_data);
+    let threshold = floor(0.9 * total_data);
     if(i < threshold) {
       category.training[i] = data.bytes.subarray(offset, offset+len);
       category.training[i].label = label;
