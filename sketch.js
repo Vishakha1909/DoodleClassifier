@@ -179,24 +179,34 @@ function setup() {
     let classification = guess.indexOf(m);
     if(classification === BOOK)
     {
+      final = "BOOK";
       console.log("BOOK");
     }
     else if(classification === RAINBOW)
     {
+      final = "RAINBOW";
       console.log("RAINBOW");
     }
     else if(classification === BICYCLE)
     {
+      final = "BICYCLE";
       console.log("BICYCLE");
     }
     else if(classification === BOWTIE)
     {
+      final = "BOWTIE";
       console.log("BOWTIE");
     }
     else if(classification === SMILEY)
     {
+      final = "SMILEY FACE";
       console.log("SMILEY FACE")
     }
+    else
+    {
+      final = "NOT SURE";
+    }
+    window.alert(final);
   });
 
   let clearButton = select('#clear');
